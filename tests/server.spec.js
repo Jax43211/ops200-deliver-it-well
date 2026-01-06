@@ -38,12 +38,12 @@ describe('server/app.js', function() {
     });
   });
 
-  it('page says hello world', (done) => {
+  it('Does this pass the test?', (done) => {
   chai.request(server)
     .get('/')
     .end((err, res) => {
       expect(err).not.exist;
-      expect(JSON.stringify(res.text)).to.contain('Does this pass the test?');
+      expect(JSON.stringify(res.text)).to.contain('Hopefully render doesnt deploy this');
       done();
     });
   });
